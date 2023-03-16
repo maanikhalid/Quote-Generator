@@ -6,6 +6,8 @@
     <link rel="icon" href="<?php echo $favicon; ?>">
     <title>Khalid Maani</title>
 	<link rel="stylesheet" href="landing/style.css" />
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
 
 <body>
@@ -16,21 +18,20 @@
             <div class="header">
                 <img class="profile-pic" src="landing/face.png" />
                 <h2>khalidmaani</h2>
-                <span>5h ago</span>
+                <span id="datePostEl">5h ago</span>
                 <div class="badge">Author</div>
                 <div class="refresh">
-                        <button>🔄</button>
+                        <button id="refreshEl">🔄</button>
                 </div>
             </div>
             
-            <div class="content">
-                <img src="landing/face.png" />
-                <p>If you really just want to filter out the first n character of a file, the tool you want is dd which allows you to specify the number of blocks to skip. If you want a block size of 1, specify that with bs. </p>
+            <div class="content" id="contentEl">
+                
             </div>
             
             <div class="interactions">
-                <button class="likeBtn">😐</button>
-                <div class="likeCounter">233</div>
+                <button class="likeBtn" id="mainLikeEl">😐</button>
+                <div class="likeCounter" id="mainLikeCounterEl"></div>
             </div>
             
             </div>
@@ -39,7 +40,7 @@
                 <div class="header">
                 <img class="profile-pic" src="landing/face.png" />
                 <h2>khalidmaani</h2>
-                <span>5h ago</span>
+                <span>Just now</span>
                 <div class="badge">Author</div>
             </div>
             
@@ -49,8 +50,8 @@
                         <a href="#"><img src="landing/instagram.webp" width="25" /></a>
                 </div>
                 <div class="interactions">
-                <button class="likeBtn">😐</button>
-                <div class="likeCounter">233</div>
+                <button class="likeBtn" id="socialLikeEl">😐</button>
+                <div class="likeCounter" id="socialLikeCounterEl"></div>
             </div>
             </div>
                 
@@ -63,6 +64,6 @@
         
 	</div>
 
-    
+<script type="text/javascript" src="landing/script.js"></script>  
 </body>
 </html>
