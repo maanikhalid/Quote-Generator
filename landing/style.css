@@ -12,9 +12,10 @@ body {margin: 0 auto; padding: 0px; font-family: "Inter", sans-serif; font-size:
     display: flex;
     justify-content: center;
     align-content: center;
-    align-items: center;
-    width: 100vw; 
-    height: 100vh;
+    align-items: flex-start;
+    width: 100%; 
+    min-height: 100vh;
+    height: 100%;
 }
 
 .card {
@@ -90,6 +91,21 @@ h2 {
     margin: 0;
     padding: 0;
 }
+.animate{
+    animation: pad 0.3s linear;
+}
+@keyframes pad
+{
+  0%
+  {
+    padding: 100px;
+  }
+  
+  100%
+  {
+    padding: 0px;
+  }
+}
 .content > img {
     width: 100%;
     object-fit: cover;
@@ -117,7 +133,10 @@ h2 {
     width: 30px;
     transition: all 0.3s
 }
-
+p > span {
+    color: #007AFF;
+    font-weight: 600;
+}
 .likeBtn:hover{
     cursor: pointer;
 }
