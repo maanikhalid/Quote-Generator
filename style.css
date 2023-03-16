@@ -1,6 +1,150 @@
-.color-change-5x{-webkit-animation:color-change-5x 8s linear infinite alternate both;animation:color-change-5x 8s linear infinite alternate both; width: 100vw; height: 100vh; display: block;}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {margin: 0 auto; padding: 0px;}
+.color-change-5x{-webkit-animation:color-change-5x 8s linear infinite alternate both;animation:color-change-5x 8s linear infinite alternate both; width: 100vw; height: 100vh;}
+
+body {margin: 0 auto; padding: 0px; font-family: "Inter", sans-serif; font-size: 0.9rem; font-weight: 500; line-height: 1.75rem; letter-spacing: -0.2px}
 
 @-webkit-keyframes color-change-5x{0%{background:#19dcea}25%{background:#b22cff}50%{background:#ea2222}75%{background:#f5be10}100%{background:#3bd80d}}@keyframes color-change-5x{0%{background:#19dcea}25%{background:#b22cff}50%{background:#ea2222}75%{background:#f5be10}100%{background:#3bd80d}}
 
+@-webkit-keyframes border-change-5x{0%{border-color:#19dcea}25%{border-color:#b22cff}50%{border-color:#ea2222}75%{border-color:#f5be10}100%{border-color:#3bd80d}}@keyframes border-change-5x{0%{border-color:#19dcea}25%{border-color:#b22cff}50%{border-color:#ea2222}75%{border-color:#f5be10}100%{border-color:#3bd80d}}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100vw; 
+    height: 100vh;
+}
+
+.card {
+    width: 400px;
+    height: auto;
+    background: #ffffff;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 0.4rem;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.7rem;
+    border-radius: 0.4rem;
+
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.05);
+    position: relative;
+    
+}
+.header {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem
+}
+h2 {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.header > span {
+    color: darkgrey;
+}
+
+.badge {
+    color: #007AFF;
+    background: #D0E2F8;
+    padding: .01rem .5rem;
+    border-radius: .4rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+.refresh{
+    flex-grow: 1;
+    text-align: right;
+}
+.refresh button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0px;
+}
+
+.profile-pic {
+    width: 35px;
+    height: auto;
+    border-radius: 100%;
+    border: 0.15rem solid white; 
+    -webkit-animation:border-change-5x 8s linear infinite alternate both;animation:border-change-5x 8s linear infinite alternate both;
+}
+
+.content {
+    margin: 0;
+    padding: 0;
+}
+.content > img {
+    width: 100%;
+    object-fit: cover;
+}
+.content p {
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.2rem
+}
+
+.interactions {
+    display: grid;
+    width: fit-content;
+    gap: 10px;
+
+}
+
+.likeBtn {
+    border: 1.5px solid #e1e1e1;
+    background: #ffffff;
+    padding: 0px 4px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    width: 30px;
+}
+
+.likeBtn:hover{
+    cursor: pointer;
+}
+.likeCounter::before {
+    content: "😄";
+    font-size: 0.8rem;
+}
+.likeCounter {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border: 1.5px solid #e1e1e1;
+    background: #ffffff;
+    padding: 0px 6px 0px 4px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.reply {
+    padding: 1rem;
+    border-radius: 0rem 0rem 0.4rem 0.4rem;
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 0.7rem;
+}
+.reply > .content {
+    padding-left: 3rem;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
